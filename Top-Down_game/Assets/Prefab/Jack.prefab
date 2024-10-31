@@ -112,9 +112,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
   - {fileID: 8300000, guid: bb769e48ded95ea49adf69f27fcfaac9, type: 3}
   - {fileID: 8300000, guid: bb769e48ded95ea49adf69f27fcfaac9, type: 3}
-  footstepsSound: {fileID: 9062561708209271232}
-  itemcollect: {fileID: 0}
-  DogSnowpuff: {fileID: 0}
 --- !u!61 &7849235856406495913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -197,7 +194,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3758d5e62bd8a8c4bbfd2ee0584c1b88, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ba692b7b9abd5834d9b3334fffc0745f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.585
   m_Pitch: 0.47
