@@ -18,9 +18,9 @@ public class PlayerController : MonoBehaviour
 
     //audio variables
     public AudioSource soundEffects;
-    public AudioClip[] sounds;
-    public AudioSource footstepsSound; // Public variable to access the Audio Source component
-    public AudioSource itemcollect;
+    public AudioClip[] sounds; // Public variable to access the Audio Source component
+
+  
 
     //public Rigidbody2D rb;
 
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             newPosition.y += speed;
             //change sprite to up sprite
             sr.sprite = upSprite;
-       
+
         }
 
         //go left
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             newPosition.x -= speed;
             //change sprite to left sprite
             sr.sprite = leftSprite;
-      
+
         }
 
         //go down
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
             newPosition.y -= speed;
             //change sprite to down sprite
             sr.sprite = frontSprite;
-       
+
         }
 
         //go right
@@ -77,75 +77,12 @@ public class PlayerController : MonoBehaviour
             newPosition.x += speed;
             //change sprite to right sprite
             sr.sprite = rightSprite;
-        
+
         }
 
-       
+
         transform.position = newPosition;
 
-        {
-
-            if (Input.GetKeyDown("w"))
-
-            {
-
-                footstepsSound.Play();
-
-            }
-
-            else if (Input.GetKeyUp("w")) // Check if key is released
-
-            {
-
-                footstepsSound.Stop();
-
-            }
-            if (Input.GetKeyDown("a"))
-
-            {
-
-                footstepsSound.Play();
-
-            }
-
-            else if (Input.GetKeyUp("a")) // Check if key is released
-
-            {
-
-                footstepsSound.Stop();
-
-            }
-            if (Input.GetKeyDown("s"))
-
-            {
-
-                footstepsSound.Play();
-
-            }
-
-            else if (Input.GetKeyUp("s")) // Check if key is released
-
-            {
-
-                footstepsSound.Stop();
-
-            }
-            if (Input.GetKeyDown("d"))
-
-            {
-
-                footstepsSound.Play();
-
-            }
-
-            else if (Input.GetKeyUp("d")) // Check if key is released
-
-            {
-
-                footstepsSound.Stop();
-
-            }
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -154,7 +91,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("door1"))
         {
             Debug.Log("change scene");
-       
+
             SceneManager.LoadScene(1);
         }
 
@@ -169,23 +106,16 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("obtained key");
             hasKey = true; //player has the key now
-            soundEffects.PlayOneShot(sounds[0], .7f); //play item collect sound effect
+            soundEffects.PlayOneShot(sounds[0], 1f); //play item collect sound effect
         }
 
         if (collision.gameObject.tag.Equals("door2") && hasKey == true)
         {
             Debug.Log("unlocked door!");
-      
-            SceneManager.LoadScene(0); //take to new scene
+            soundEffects.PlayOneShot(sounds[1], .1f); //play door sound effect
+            SceneManager.LoadScene(3); //take to new scene
         }
-
-        if (collision.gameObject.tag.Equals("door2") && hasKey == true)
-        {
-            Debug.Log("unlocked door!");
-            //take to new scene
-        }
-
-       
+        
     }
 
 }

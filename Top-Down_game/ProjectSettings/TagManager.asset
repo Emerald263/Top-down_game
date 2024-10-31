@@ -9,6 +9,10 @@ TagManager:
   - door 3
   - door3
   - Hiddensnowpuff
+  - DogSnowpuff
+  - Dogpuff
+  - Dog
+  - door2
   layers:
   - Default
   - TransparentFX

@@ -23,6 +23,7 @@ public class Key : MonoBehaviour
         {
             Debug.Log("ive been collected!");
             Destroy(this.gameObject); //destroy the key
+         
         }
 
     

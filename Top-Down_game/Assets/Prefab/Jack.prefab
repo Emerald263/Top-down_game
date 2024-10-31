@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22b7d3ca8bdc3e41bd169e73745398f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.02
+  speed: 0.03
   hasKey: 0
   upSprite: {fileID: 21300000, guid: d83f1b4344111d94a9b67f3a08d7ff68, type: 3}
   leftSprite: {fileID: 21300000, guid: f3c13b7c20a64a94ead6402d7d896076, type: 3}
@@ -110,12 +110,11 @@ MonoBehaviour:
   soundEffects: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
-  - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
-  - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
-  - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
-  - {fileID: 8300000, guid: 9b8dc6ae4406b2348887f5759e7bee27, type: 3}
+  - {fileID: 8300000, guid: bb769e48ded95ea49adf69f27fcfaac9, type: 3}
+  - {fileID: 8300000, guid: bb769e48ded95ea49adf69f27fcfaac9, type: 3}
   footstepsSound: {fileID: 9062561708209271232}
   itemcollect: {fileID: 0}
+  DogSnowpuff: {fileID: 0}
 --- !u!61 &7849235856406495913
 BoxCollider2D:
   m_ObjectHideFlags: 0
